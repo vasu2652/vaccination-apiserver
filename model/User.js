@@ -87,6 +87,7 @@ module.exports = {
                         }
                         return resolve(data);
                     });
+                    return;
                 }
                 return reject(new Error(`User Already Exists with provided Details email: ${userData.email}`))
             } catch (error) {
