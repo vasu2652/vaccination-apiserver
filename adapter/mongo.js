@@ -4,7 +4,7 @@ const connectToDB = () => {
     const username = process.env.DB_USER
     const password = process.env.DB_PASSWORD
     const database_name = process.env.DB_NAME
-    const URL = `mongodb+srv://${username}:${password}@cluster0.au65m.mongodb.net/${database_name}?retryWrites=true&w=majority`
+    const URL = `mongodb+srv://${username}:${password}@vasudev.au65m.mongodb.net/${database_name}?retryWrites=true&w=majority`
     mongoose.connect(URL);
     const db = mongoose.connection;
     db.on('connected', function () {
