@@ -9,9 +9,10 @@ var usersRouter = require('./routes/users');
 var appointmentRouter = require('./routes/appointment');
 var hospitalRouter = require('./routes/hospital');
 const connectToDB = require('./adapter/mongo');
-
+const cors = require('cors');
 var app = express();
 (function(){
+  app.use(cors());
   app.use(logger('dev'));
   app.use(express.json());
   app.use(express.urlencoded({ extended: false }));
