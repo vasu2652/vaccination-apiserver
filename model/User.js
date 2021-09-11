@@ -60,7 +60,7 @@ module.exports = {
     validateLogin: function (userData) {
         return new Promise(async function (resolve, reject) {
             try {
-                const user = await UserSchema.methods.findByEmail(userData.email);
+                const user = UserSchema.methods.findByEmail(userData.email);
                 if (user?.validPassword(userData.password)) {
                     return resolve(user);
                 }
