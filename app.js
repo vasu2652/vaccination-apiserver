@@ -11,10 +11,6 @@ var hospitalRouter = require('./routes/hospital');
 const connectToDB = require('./adapter/mongo');
 
 var app = express();
-const cors = require('cors');
-
-app.use(cors());
-
 (function(){
   app.use(logger('dev'));
   app.use(express.json());
