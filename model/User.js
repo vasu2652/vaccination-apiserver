@@ -61,6 +61,7 @@ module.exports = {
         return new Promise(async function (resolve, reject) {
             try {
                 const user = UserSchema.methods.findByEmail(userData.email);
+                console.log(user,"this is testing");
                 if (user?.validPassword(userData.password)) {
                     return resolve(user);
                 }
