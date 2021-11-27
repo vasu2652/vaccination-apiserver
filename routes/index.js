@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
-  res.send("Welcome to Eduonix");
+  res.send("Welcome to Eduonix Vaccination Application");
 });
 
 module.exports = router;
